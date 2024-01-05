@@ -1,0 +1,186 @@
+
+rithv@Rithvik MINGW64 /d/DEVOPS (master)
+$ get remote origin https://github.com/SaiRithvik-0408/devops
+bash: get: command not found
+
+rithv@Rithvik MINGW64 /d/DEVOPS (master)
+$ get remote add origin https://github.com/SaiRithvik-0408/devops
+bash: get: command not found
+
+rithv@Rithvik MINGW64 /d/DEVOPS (master)
+$ get remote add origin https://github.com/SaiRithvik-0408/devops.git
+bash: get: command not found
+
+rithv@Rithvik MINGW64 /d/DEVOPS (master)
+$ git remote add origin https://github.com/SaiRithvik-0408/devops.git
+
+rithv@Rithvik MINGW64 /d/DEVOPS (master)
+$ remote -v
+bash: remote: command not found
+
+rithv@Rithvik MINGW64 /d/DEVOPS (master)
+$ git remote -v
+origin  https://github.com/SaiRithvik-0408/devops.git (fetch)
+origin  https://github.com/SaiRithvik-0408/devops.git (push)
+
+rithv@Rithvik MINGW64 /d/DEVOPS (master)
+$ git fetch origin
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 591 bytes | 36.00 KiB/s, done.
+From https://github.com/SaiRithvik-0408/devops
+ * [new branch]      main       -> origin/main
+
+rithv@Rithvik MINGW64 /d/DEVOPS (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+rithv@Rithvik MINGW64 /d/DEVOPS (master)
+$ git switch main
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git branch
+* main
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git pull origin
+Already up to date.
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git log
+commit a89a19308ed99de1b9c75b93d7b7a0a498e4f571 (HEAD -> main, origin/main)
+Author: SaiRithvik-0408 <155506028+SaiRithvik-0408@users.noreply.github.com>
+Date:   Fri Jan 5 07:43:18 2024 +0530
+
+    Add files via upload
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git add sample2.txt
+fatal: pathspec 'sample2.txt' did not match any files
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git add sample2.txt
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git commit -m "First Commit"
+[main e74fdfc] First Commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sample2.txt
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git log
+commit e74fdfc36fcb4f72befe14384b499b4b0e6e902a (HEAD -> main)
+Author: SaiRithvik-0408 <karnatisairithvik@gmail.com>
+Date:   Fri Jan 5 07:55:24 2024 +0530
+
+    First Commit
+
+commit a89a19308ed99de1b9c75b93d7b7a0a498e4f571 (origin/main)
+Author: SaiRithvik-0408 <155506028+SaiRithvik-0408@users.noreply.github.com>
+Date:   Fri Jan 5 07:43:18 2024 +0530
+
+    Add files via upload
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git remote add origin https://github.com/SaiRithvik-0408/devops.git
+error: remote origin already exists.
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/SaiRithvik-0408/devops.git'
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 250 bytes | 250.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/SaiRithvik-0408/devops.git
+   a89a193..e74fdfc  main -> main
+branch 'main' set up to track 'origin/main'.
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git push -u origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ ls
+sample.txt  sample2.txt
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git log
+commit e74fdfc36fcb4f72befe14384b499b4b0e6e902a (HEAD -> main, origin/main)
+Author: SaiRithvik-0408 <karnatisairithvik@gmail.com>
+Date:   Fri Jan 5 07:55:24 2024 +0530
+
+    First Commit
+
+commit a89a19308ed99de1b9c75b93d7b7a0a498e4f571
+Author: SaiRithvik-0408 <155506028+SaiRithvik-0408@users.noreply.github.com>
+Date:   Fri Jan 5 07:43:18 2024 +0530
+
+    Add files via upload
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git reset ^C
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git reset e74fdfc36fcb4f72befe14384b499b4b0e6e902a
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git commit
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git log
+commit e74fdfc36fcb4f72befe14384b499b4b0e6e902a (HEAD -> main, origin/main)
+Author: SaiRithvik-0408 <karnatisairithvik@gmail.com>
+Date:   Fri Jan 5 07:55:24 2024 +0530
+
+    First Commit
+
+commit a89a19308ed99de1b9c75b93d7b7a0a498e4f571
+Author: SaiRithvik-0408 <155506028+SaiRithvik-0408@users.noreply.github.com>
+Date:   Fri Jan 5 07:43:18 2024 +0530
+
+    Add files via upload
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ ls
+sample.txt  sample2.txt
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git push
+Everything up-to-date
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git push enter
+fatal: 'enter' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git remote add origin https://github.com/SaiRithvik-0408/devops.git
+error: remote origin already exists.
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ git push
+Everything up-to-date
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$ ^C
+
+rithv@Rithvik MINGW64 /d/DEVOPS (main)
+$
